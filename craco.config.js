@@ -1,5 +1,6 @@
 const path = require("path");
 
+// 配置别名
 module.exports = {
   webpack: {
     alias: {
