@@ -1,5 +1,9 @@
 import React, { memo } from "react";
 
+// 导入 provider 共享store
+import { Provider } from "react-redux";
+import store from "@/store";
+
 import { HashRouter } from "react-router-dom";
 
 import { renderRoutes } from "react-router-config";
@@ -10,10 +14,12 @@ import LQAppFooter from "@/components/app-footer";
 
 export default memo(function App() {
   return (
-    <HashRouter>
-      <LQAppHeader />
-      {renderRoutes(routes)}
-      <LQAppFooter />
-    </HashRouter>
+    <Provider store={store}>
+      <HashRouter>
+        <LQAppHeader />
+        {renderRoutes(routes)}
+        <LQAppFooter />
+      </HashRouter>
+    </Provider>
   );
 });

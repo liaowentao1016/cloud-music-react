@@ -101,6 +101,6 @@ export const HomeWrapper = styled.div`
   }
   .line {
     height: 5px;
-    background-color: red;
+    background-color: #c20c0c;
   }
 `;

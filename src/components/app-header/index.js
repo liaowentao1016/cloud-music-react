@@ -14,7 +14,7 @@ export default memo(function LQAppFooter() {
   const showSelectItem = (item, index) => {
     if (index < 3) {
       return (
-        <NavLink to={item.link} exact>
+        <NavLink to={item.link}>
           {item.title}
           <i className="icon sprite_01"></i>
         </NavLink>
@@ -28,7 +28,7 @@ export default memo(function LQAppFooter() {
     <HomeWrapper>
       <div className="content wrap-v1">
         <div className="left">
-          <a href="#/" className="logo sprite_01">
+          <a href="/#" className="logo sprite_01">
             云音乐
           </a>
           <div className="select-list">

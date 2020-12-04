@@ -5,11 +5,11 @@ export const headerLinks = [
   },
   {
     title: "我的音乐",
-    link: "/mine"
+    link: "/my"
   },
   {
     title: "朋友",
-    link: "/friend"
+    link: "/friends"
   },
   {
     title: "商城",
@@ -23,7 +23,7 @@ export const headerLinks = [
     title: "下载客户端",
     link: "https://music.163.com/#/download"
   }
-]
+];
 
 export const footerLinks = [
   {
@@ -46,7 +46,7 @@ export const footerLinks = [
     title: "意见反馈",
     link: "#"
   }
-]
+];
 
 export const footerImages = [
   {
@@ -61,7 +61,7 @@ export const footerImages = [
   {
     link: "https://music.163.com/uservideo#/plan"
   }
-]
+];
 
 // discover中的数据
 export const dicoverMenu = [
@@ -88,5 +88,5 @@ export const dicoverMenu = [
   {
     title: "新碟上架",
     link: "/discover/album"
-  },
-]
+  }
+];
