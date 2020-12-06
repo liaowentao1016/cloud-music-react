@@ -12,6 +12,8 @@ import routes from "@/router";
 import LQAppHeader from "@/components/app-header";
 import LQAppFooter from "@/components/app-footer";
 
+import GoToTop from "@/components/go-to-top";
+
 export default memo(function App() {
   return (
     <Provider store={store}>
@@ -20,6 +22,7 @@ export default memo(function App() {
         {renderRoutes(routes)}
         <LQAppFooter />
       </HashRouter>
+      <GoToTop />
     </Provider>
   );
 });

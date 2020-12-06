@@ -1,8 +1,25 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import TopBanners from "./c-cpns/top-banner";
 
-import { getToBannersAction } from "./store/actionCreators";
+import {
+  RecommendWrapper,
+  Content,
+  RecommendLeft,
+  RecommendRight
+} from "./style";
+
+import HotRecommend from "./c-cpns/hot-recommend";
+
+import NewAlbums from "./c-cpns/new-album";
+
+import RecRanking from "./c-cpns/recommend-ranking";
+
+import UserLogin from "./c-cpns/user-login";
+
+import EnterSinger from "./c-cpns/enter-singer";
+
+import HotAnchor from "./c-cpns/hot-anchor";
 
 // function LQRecommend(props) {
 //   const { getBanners, topBanners } = props;
@@ -31,28 +48,22 @@ import { getToBannersAction } from "./store/actionCreators";
 // export default connect(mapStateToProps, mapDispatchToProps)(memo(LQRecommend));
 
 function LQRecommend(props) {
-  // 利用reduxHooks 让组件与redux关联 获取数据
-  // shallowEqual优化 避免不必要的渲染
-  const { topBanners } = useSelector(
-    state => ({
-      // 因为state数据现在是 immutable对象 所以取值按这种方式
-      // topBanners: state.get("recommend").get("topBanners")
-      topBanners: state.getIn(["recommend", "topBanners"])
-    }),
-    shallowEqual
-  );
-
-  const dispatch = useDispatch();
-
-  // 模拟生命周期 发送网络请求
-  useEffect(() => {
-    dispatch(getToBannersAction());
-  }, [dispatch]);
-
   return (
-    <div>
-      <h2>LQRecommend组件:{topBanners.length}</h2>
-    </div>
+    <RecommendWrapper>
+      <TopBanners />
+      <Content className="wrap-v2">
+        <RecommendLeft>
+          <HotRecommend />
+          <NewAlbums />
+          <RecRanking />
+        </RecommendLeft>
+        <RecommendRight>
+          <UserLogin />
+          <EnterSinger />
+          <HotAnchor />
+        </RecommendRight>
+      </Content>
+    </RecommendWrapper>
   );
 }
 
