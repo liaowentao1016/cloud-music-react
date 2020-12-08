@@ -91,13 +91,13 @@ export const getRecRankingAction = idx => {
     getRankingList(idx).then(res => {
       switch (idx) {
         case 0:
-          dispatch(changeTopRankingAction(res));
-          break;
-        case 2:
           dispatch(changeNewRankingAction(res));
           break;
-        case 3:
+        case 2:
           dispatch(changeOriginRankingAction(res));
+          break;
+        case 3:
+          dispatch(changeTopRankingAction(res));
           break;
         default:
       }

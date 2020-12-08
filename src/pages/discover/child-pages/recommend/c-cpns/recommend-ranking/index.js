@@ -13,9 +13,9 @@ export default memo(function RecommendRanking() {
   // 发送异步请求 将数据存入reducer中
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(getRecRankingAction(3));
     dispatch(getRecRankingAction(0));
     dispatch(getRecRankingAction(2));
-    dispatch(getRecRankingAction(3));
   }, [dispatch]);
 
   // 从reducer中获取数据

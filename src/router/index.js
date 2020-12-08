@@ -14,6 +14,7 @@ import LQSongs from "@/pages/discover/child-pages/songs";
 import LQDJradio from "@/pages/discover/child-pages/djradio";
 import LQArtist from "@/pages/discover/child-pages/artist";
 import LQAlbum from "@/pages/discover/child-pages/album";
+import LQPlayer from "@/pages/player";
 
 const routes = [
   {
@@ -35,7 +36,8 @@ const routes = [
       { path: "/discover/songs", component: LQSongs },
       { path: "/discover/djradio", component: LQDJradio },
       { path: "/discover/artist", component: LQArtist },
-      { path: "/discover/album", component: LQAlbum }
+      { path: "/discover/album", component: LQAlbum },
+      { path: "/discover/player", component: LQPlayer }
     ]
   },
   { path: "/my", component: LQMy },

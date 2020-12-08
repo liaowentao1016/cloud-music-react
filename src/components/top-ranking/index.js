@@ -4,9 +4,22 @@ import { RankingItemWrapper } from "./style";
 
 import { getSizeImage } from "@/utils/format-utils";
 
+import { getSongDetailAction } from "@/pages/player/store/actionCreators";
+import { useDispatch } from "react-redux";
+
 export default memo(function RankingItem(props) {
+  // props and state
   const { info } = props;
   const { tracks = [] } = info;
+
+  // redux hooks
+  const dispatch = useDispatch();
+
+  // handle function
+  const playMusic = item => {
+    dispatch(getSongDetailAction(item.id));
+  };
+
   return (
     <RankingItemWrapper>
       <div className="header">
@@ -32,7 +45,10 @@ export default memo(function RankingItem(props) {
               <div className="info">
                 <div className="name text-nowrap">{item.name}</div>
                 <div className="operate">
-                  <button className="btn play sprite_02"></button>
+                  <button
+                    className="btn play sprite_02"
+                    onClick={e => playMusic(item)}
+                  ></button>
                   <button className="btn addto sprite_icon2"></button>
                   <button className="btn favor sprite_02"></button>
                 </div>

@@ -12,3 +12,8 @@ export function getCount(count) {
 export function getSizeImage(imgUrl, size) {
   return `${imgUrl}?param=${size}x${size}`;
 }
+
+// 获取播放歌曲的流媒体文件
+export function getPlayUrl(id) {
+  return `https://music.163.com/song/media/outer/url?id=${id}.mp3`;
+}

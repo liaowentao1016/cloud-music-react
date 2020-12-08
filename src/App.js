@@ -14,6 +14,8 @@ import LQAppFooter from "@/components/app-footer";
 
 import GoToTop from "@/components/go-to-top";
 
+import AppPlayerBar from "@/pages/player/app-player-bar";
+
 export default memo(function App() {
   return (
     <Provider store={store}>
@@ -21,6 +23,7 @@ export default memo(function App() {
         <LQAppHeader />
         {renderRoutes(routes)}
         <LQAppFooter />
+        <AppPlayerBar />
       </HashRouter>
       <GoToTop />
     </Provider>
