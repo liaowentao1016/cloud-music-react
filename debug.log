@@ -5,3 +5,4 @@
 [1206/151341.104:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\asus\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\910f6e10-8985-4d77-8b62-7a1c283a238e: 系统找不到指定的路径。 (0x3)
 [1206/151402.183:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
 [1207/135109.479:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1208/092036.421:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
