@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, Suspense } from "react";
 
 // 导入 provider 共享store
 import { Provider } from "react-redux";
@@ -21,7 +21,9 @@ export default memo(function App() {
     <Provider store={store}>
       <HashRouter>
         <LQAppHeader />
-        {renderRoutes(routes)}
+        <Suspense fallback={<div>page Loading</div>}>
+          {renderRoutes(routes)}
+        </Suspense>
         <LQAppFooter />
         <AppPlayerBar />
       </HashRouter>
